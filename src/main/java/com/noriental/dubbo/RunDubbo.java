@@ -45,10 +45,10 @@ public class RunDubbo extends AbstractJavaSamplerClient {
     public Arguments getDefaultParameters() {
         Arguments params = new Arguments();
         params.addArgument("zk", "zookeeper://IP地址:2181");
-        params.addArgument("intetfaceClassName", "Service名称");
+        params.addArgument("serviceName", "服务名称");
+        params.addArgument("methodName", "方法名称");
         params.addArgument("paramType","参数类型");
-        params.addArgument("methodName", "findFutureYear");
-        params.addArgument("requestInfo", "{\"orgType\":2,\"orgId\":119,\"reqId\":\"123456789\"}");
+        params.addArgument("params", "{\"orgType\":2,\"orgId\":119,\"reqId\":\"123456789\"}");
         params.addArgument("expectedCode", "code=0");
         return params;
     }
@@ -56,10 +56,10 @@ public class RunDubbo extends AbstractJavaSamplerClient {
     //获取jmeter输入的参数值
     public void setValues(JavaSamplerContext arg0) {
         zk = arg0.getParameter("zk");
-        intetfaceClassName = arg0.getParameter("intetfaceClassName");
-        paramType = arg0.getParameter("paramType");
+        intetfaceClassName = arg0.getParameter("serviceName");
         methodName = arg0.getParameter("methodName");
-        requestInfo = arg0.getParameter("requestInfo");
+        paramType = arg0.getParameter("paramType");
+        requestInfo = arg0.getParameter("params");
         expectedCode = arg0.getParameter("expectedCode");
     }
 
