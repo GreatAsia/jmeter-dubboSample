@@ -2,9 +2,9 @@
 *使用条件 <br>
 * apache-jmeter-5.1.1版本 <br>
 *操作步骤 <br>
-*1 使用maven的package打包，会在target目录下面生成lib目录和dubboGeneralize-jmeter-1.0-SNAPSHOT.jar <br>
-*2 把lib目录下面的jar包拷贝到 apache-jmeter-5.1.1\lib 下面 <br>
-*3 把dubboGeneralize-jmeter-1.0-SNAPSHOT.jar 拷贝到 D:\apache-jmeter-5.1.1\lib\ext  <br>
+*1 使用maven的package打包，会在target目录下面生成lib目录和dubboGeneralize-jmeter-1.0-SNAPSHOT-jar-with-dependencies.jar <br>
+*2 dubboGeneralize-jmeter-1.0-SNAPSHOT-jar-with-dependencies.jar 就是已经集成所有依赖的jar包 <br>
+*3 把dubboGeneralize-jmeter-1.0-SNAPSHOT-jar-with-dependencies.jar 拷贝到 JMETER_HOME\lib\ext  <br>
 *4 在bin目录下面启动jmeter.bat  <br>
 *5 创建线程组，创建JavaRequest, ClassName选择com。noriental.dubbo.RunDubbo   <br>
 *6 根据下面的Name修改对应的Value值  <br>
